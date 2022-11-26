@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar";
+ 
 import { Link } from "react-router-dom";
 import axios from "axios"
+import Navbar2 from "./Navbars/Navbar2";
 
 function Modal() {
   
@@ -15,15 +16,15 @@ function Modal() {
   };
  
   // create todo 
-  const handleCreate = async() => {
+  const handleCreate = async() => { 
       const response= await axios.post("/createtodo",{name,tasks}) 
       console.log(response.data)
   }
 
   return (
     <>
-      <Navbar />
-      <section className="text-gray-600 body-font">
+      <Navbar2 />
+      <section className="text-gray-600 body-font mt-10">
         <div className="container mx-auto px-5   flex   items-center justify-center ">
           <div className=" md:w-[50%] bg-gray-100 rounded-lg p-8 flex flex-col     mt-10 md:mt-0">
             <div className="flex justify-between  items-center">
@@ -31,7 +32,7 @@ function Modal() {
                 Create Your Todo
               </h2>
               <button
-                className="text-white bg-green-800 border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg text-[15px] mb-3"
+                className="text-white   border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg text-[15px] mb-3" style={{backgroundColor:"#0395BB"}}
                 onClick={() => {
                   handleMoreTasks();
                 }}
@@ -79,16 +80,19 @@ function Modal() {
             })}
 
             <div className="flex justify-center">
+            <Link to="/todolist">
               <button
-                className="text-white bg-green-800 border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg mr-10"
+                className="text-white   border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg mr-10" style={{backgroundColor:"#0395BB"}}
                 onClick={() => {
                   handleCreate();
                 }}
               >
-                <Link to="/todolist"> Create </Link>
+                Create 
               </button>
+              </Link>
               <button className="text-white bg-red-800 border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg">
-                <Link to="/">Cancel</Link>
+               {/* not always takes  you to home */}
+                <Link to="/todolist">Cancel</Link>
               </button>
             </div>
           </div>

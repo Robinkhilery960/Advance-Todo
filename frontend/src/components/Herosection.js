@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 function Herosection() {
   return (
-    <section className="text-gray-600 body-font text-green-900">
+    <section className="text-gray-600 body-font text-gray-200">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
           <img
@@ -19,12 +19,12 @@ function Herosection() {
             work and life, finally.
           </h1>
           <p className="mb-8 text-xl">
-            Become focused, organized, and calm<br/> with Todo App. The world’s #1
+            Become focused, organized, and calm<br/> with Todo App. An efficent
             task manager and to-do list app.<br/>
            <span className="font-bold "> Create Your first todo</span>
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex  font-medium  text-white   border-0 py-2 px-6 focus:outline-none   rounded text-lg bg-green-800">
+            <button className="inline-flex  font-medium  text-white   border-0 py-2 px-6 focus:outline-none   rounded text-lg " style={{backgroundColor:"#0395BB"}}>
             <Link to="/createyourtodo">Create Your First Todo</Link>  
             </button>
              

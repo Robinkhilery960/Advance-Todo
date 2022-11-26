@@ -1,11 +1,11 @@
-import React from 'react' 
-import Navbar from './Navbar';
-import Herosection from './Herosection';
+import React from 'react'  
+import Login from './Authentication/Login'; 
+import Navbar1 from './Navbars/Navbar1';
 function Home() {
   return (
      <>
-     <Navbar/>
-     <Herosection/>
+     <Navbar1/>
+     <Login/> 
      </>
   )
 }
