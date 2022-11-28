@@ -44,11 +44,11 @@ function Navbar2() {
           </fieldset>
           <a className="mr-5">
             {" "}
-            <Link to="/">Home</Link>{" "}
+            <Link to="/dashboard">Dashboard</Link>{" "}
           </a>
           <a className="mr-5">
             {" "}
-            <Link to="#">Create Todo</Link>{" "}
+            <Link to="/createyourtodo">Create Todo</Link>{" "}
           </a>
           <img src={logo} className="h-16 w-16" rounded />
         </nav>

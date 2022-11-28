@@ -70,7 +70,7 @@ useEffect(()=>{
           Edit
             </button>
             </Link> 
-            <Link to="/todolist">
+            <Link to="/dashboard">
           <button className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none font-medium rounded text-lg mb-3" onClick={()=>{handleDeleteTodo(todo._id)}}>
            Delete
             </button> 

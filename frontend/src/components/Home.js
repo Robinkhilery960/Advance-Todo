@@ -1,12 +1,14 @@
-import React from 'react'  
-import Login from './Authentication/Login'; 
-import Navbar1 from './Navbars/Navbar1';
+import React from 'react'
+import Footer from './Footer'
+import Navbar2 from './Navbars/Navbar2'
+import Herosection from "./Herosection"
 function Home() {
   return (
-     <>
-     <Navbar1/>
-     <Login/> 
-     </>
+    <>
+    <Navbar2/>
+    <Herosection/>
+    <Footer/>
+    </>
   )
 }
 

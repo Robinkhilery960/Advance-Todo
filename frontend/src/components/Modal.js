@@ -80,7 +80,7 @@ function Modal() {
             })}
 
             <div className="flex justify-center">
-            <Link to="/todolist">
+            <Link to="/dashboard">
               <button
                 className="text-white   border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg mr-10" style={{backgroundColor:"#0395BB"}}
                 onClick={() => {
@@ -92,7 +92,7 @@ function Modal() {
               </Link>
               <button className="text-white bg-red-800 border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg">
                {/* not always takes  you to home */}
-                <Link to="/todolist">Cancel</Link>
+                <Link to="/dashboard">Cancel</Link>
               </button>
             </div>
           </div>

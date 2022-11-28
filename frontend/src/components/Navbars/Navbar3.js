@@ -48,7 +48,7 @@ function Navbar3() {
           </fieldset>
           <a className="mr-5">
             {" "}
-            <Link to="/">Home</Link>{" "}
+            <Link to="/dashboard">Dashboard</Link>{" "}
           </a>
           <a className="mr-5">
             <div class="dropdown">
