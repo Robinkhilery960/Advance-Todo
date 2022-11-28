@@ -1,5 +1,5 @@
  
-const Todo=require("../model/todo")
+const Todo=require("../model/todo") 
 exports.getTodo=async(req,res)=>{
      try {
           const todo=await Todo.findById(req.params.todoId)
