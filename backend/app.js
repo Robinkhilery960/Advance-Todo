@@ -1,13 +1,17 @@
 require("dotenv").config()
 require("./config/databse").connect()
  
-const router=require("./routes/todorouter")
- const express=require("express")
+const express=require("express")
+const todoRouter=require("./routes/todorouter") 
+const userRouter=require("./routes/userrouter")
+const cookie_parser=require("cookie-parser")
 
  const app=express()
 
+
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use('/',router)
+app.use(cookie_parser())
+app.use("/",[todoRouter,userRouter])
 
  module.exports=app
