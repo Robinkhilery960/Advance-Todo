@@ -86,17 +86,21 @@ function Edittodo() {
             })}
 
             <div className="flex justify-center">
+            <Link to={"/dashboard"}>
               <button
                 className="text-white   border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg mr-10" style={{backgroundColor:"#0395BB"}}
                 onClick={() => {
                   handleSubmit();
                 }}
               >
-                <Link to={"/todoview/"+todo._id}> Submit </Link>
+                Submit 
               </button>
+              </Link>
+              <Link to={"/dashboard"}>
               <button className="text-white bg-red-800 border-0 py-2 px-8 focus:outline-none font-medium rounded text-lg">
-                <Link to={"/todoview/"+todo._id}>Cancel</Link>
+               Cancel
               </button>
+              </Link>
             </div>
           </div>
         </div>
