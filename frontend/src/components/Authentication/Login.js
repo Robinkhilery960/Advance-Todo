@@ -1,16 +1,14 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; 
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
-
-
+import "react-toastify/dist/ReactToastify.css"; 
+import Context from "../../Context/context";
 function Login() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  let navigate = useNavigate();
-
+  const [password, setPassword] = useState(""); 
+   const {setRegistered,setLoggedIn}=useContext(Context)
+  let navigate = useNavigate(); 
   function handleSubmit(event) {
     event.preventDefault()
     console.log("hello from hanf]dle submit");
@@ -31,8 +29,11 @@ function Login() {
       password
     })
     console.log("response login",response)
+    const allCookies=document.cookie;
+    console.log("cookies",allCookies)
     if(response.status===201){ 
-          navigate("/landingpage")
+      localStorage.setItem(JSON.stringify(response.data.user))  
+      navigate("/landingpage",{replace: true} ) 
     }else { 
       return toast.warn(response.data);
     }
@@ -169,11 +170,11 @@ function Login() {
               </button>
               <p class="mt-8">
                 Need an account?{" "}
-                <a
-                  href="#"
+                <a 
                   class="text-blue-500 hover:text-blue-700 font-semibold"
+                  onClick={()=>{setRegistered(false)}}
                 >
-                  <Link to="/register">Create an account</Link>
+                   Create an account 
                 </a>
               </p>
             </div>

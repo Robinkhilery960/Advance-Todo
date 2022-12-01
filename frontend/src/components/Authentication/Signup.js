@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Navbar1 from "../Navbars/Navbar1";
+import React, { useContext, useState } from "react"; 
 import { Link ,useNavigate} from "react-router-dom";  
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios"
+import Context from "../../Context/context";
 
 function Signup() {
   const [firstname, setFirstName] = useState("User");
@@ -11,6 +11,7 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [matchPassword, setMatchPassword] = useState("");
+  const {setRegistered}=useContext(Context)
   let navigate = useNavigate();
 
   function handleSubmit(event) {
@@ -33,6 +34,7 @@ function Signup() {
        })
        console.log("response",response)
        if(response.status===201){
+        setRegistered(true)
         navigate("/")
       }else{
         return toast.warn("Email is already in use .Please login");
@@ -59,12 +61,12 @@ function Signup() {
     }
     createUser()
     
+    
   };
 
   return (
     <>
-      <ToastContainer />
-      <Navbar1 />
+      <ToastContainer /> 
       <div className="bg-gray-800">
         <div className="p-8 lg:w-1/2 mx-auto">
           <div className="bg-white rounded-t-lg p-8">
@@ -248,7 +250,7 @@ function Signup() {
                 
                   <button
                     className="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"
-                    onClick={handleCreateAccount}
+                    onClick={handleCreateAccount} 
                   >
                     Create Account
                   </button> 

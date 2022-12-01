@@ -59,7 +59,7 @@ Users using the application can explain the todo in more descriptive way with th
 - Run command 2: npm install
 - Run command 3: npm start
 
-If your webpage doesn't load hit this url in your browser: http://localhost:300
+If your webpage doesn't load hit this url in your browser: http://localhost:3000
 
 ### 🎉 Here you go your application is up and running... 🎉
 

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Footer from './Footer'
 import Navbar2 from './Navbars/Navbar2'
-import Herosection from "./Herosection"
-function Home() {
+import Herosection from "./Herosection" 
+import Navbar1 from './Navbars/Navbar1'
+function Home() { 
   return (
-    <>
-    <Navbar2/>
+    <> 
+    <Navbar1/>
     <Herosection/>
     <Footer/>
     </>

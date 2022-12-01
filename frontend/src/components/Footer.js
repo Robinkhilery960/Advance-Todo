@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"; 
-import logo from "./Navbars/logo.png"
+import logo from '../assets/logo.png'
 function Footer() {
   return (
     <header className="text-gray-600 body-font  bg-gray-600">
