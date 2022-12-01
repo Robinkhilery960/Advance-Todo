@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../Navbars/logo.png";
-import bell from "./notification.svg";
+import logo from '../../assets/logo.png'
+import bell from '../../assets/notification.svg' 
 function Navbar3() {
   return (
     <header className="text-gray-600 body-font  bg-gray-600">

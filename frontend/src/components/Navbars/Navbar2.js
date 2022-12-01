@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../Navbars/logo.png";
-import bell from './notification.svg'
+import logo from "../../assets/logo.png";
+import bell from "../../assets/notification.svg";
 function Navbar2() {
   return (
     <header className="text-gray-600 body-font  bg-gray-600">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between  ">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <img src="https://dummyimage.com/600x400/662466/fff" className="h-16 w-16 rounded-full"  alt="user_img" />
+          <img
+            src="https://dummyimage.com/600x400/662466/fff"
+            className="h-16 w-16 rounded-full"
+            alt="user_img"
+          />
           <p className="font-medium text-gray-300">
             <span className="font-bold text-white ml-5 mr-2">Hi</span>Robin
           </p>
@@ -42,13 +46,11 @@ function Navbar2() {
               />
             </div>
           </fieldset>
-          <a className="mr-5">
-            {" "}
-            <Link to="/dashboard">Dashboard</Link>{" "}
+          <a className="mr-5"> 
+            <Link to="/dashboard">Dashboard</Link> 
           </a>
-          <a className="mr-5">
-            {" "}
-            <Link to="/createyourtodo">Create Todo</Link>{" "}
+          <a className="mr-5"> 
+            <Link to="/createyourtodo">Create Todo</Link> 
           </a>
           <img src={logo} className="h-16 w-16" rounded />
         </nav>
