@@ -7,9 +7,14 @@ import Todoview from './components/Todoview';
 import Edittodo from './components/Edittodo';
 import Signup from './components/Authentication/Signup';
 import Home from './components/Home';
-
-function App() {
+import { useEffect, useState } from 'react';
+import Context from './Context/context';
+function App() { 
+  const [loggedIn,setLoggedIn]=useState(false) 
+ 
+ 
   return (
+    <Context.Provider value={{loggedIn,setLoggedIn}}>
      <Routes>
       <Route path="/" element={<LandingPage/>}></Route>
       <Route path="/createyourtodo" element={<Modal/>}></Route>
@@ -17,9 +22,9 @@ function App() {
       <Route path="/todoview/:id" element={<Todoview/>}></Route>
       <Route path="/edittodo/:id" element={<Edittodo/>}></Route>
       <Route path="/register" element={<Signup/>}></Route>
-      <Route path="/landingpage" element={<Home/>}></Route>
-      
+      <Route path="/landingpage" element={<Home/>}></Route> 
      </Routes>
+     </Context.Provider>
   );
 }
 
